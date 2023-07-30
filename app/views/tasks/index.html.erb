@@ -1,0 +1,7 @@
+<h1>ToDoアプリ</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.title %> - <%= task.description %> (<%= task.completed ? '完了' : '未完了' %>)</li>
+  <% end %>
+</ul>
