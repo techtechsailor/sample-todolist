@@ -2,6 +2,12 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.title %> - <%= task.description %> (<%= task.completed ? '完了' : '未完了' %>)</li>
+    <li>
+      <label>
+        <input type="checkbox" <% if task.completed? %> checked <% end %> />
+        <%= task.title %> - <%= task.description %> (<%= task.completed ? '完了' : '未完了' %>)
+      </label>
+    </li>
+
   <% end %>
 </ul>
