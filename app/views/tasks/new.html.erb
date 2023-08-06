@@ -1,0 +1,11 @@
+<h1>Newタスク</h1>
+<%= form_with(model: @task) do |f|%>
+  <div>
+    <%= f.text_field :title, placeholder: "new task..." %>
+  </div>
+  <br>
+  <div>
+    <%= f.text_area :description, placeholder: "detail of new task..." %>
+  </div>
+  <%= f.submit "登録"%>
+<% end %>
