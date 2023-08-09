@@ -8,6 +8,9 @@
       <label>
         <input type="checkbox" <% if task.completed? %> checked <% end %> disabled/>
         <%= task.title %> - <%= task.description %> (<%= task.completed ? '完了' : '未完了' %>)
+        <%= link_to edit_task_path(task) do%>
+          <button>編集</button>
+        <% end %>
       </label>
     </li>
 
