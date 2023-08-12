@@ -1,0 +1,22 @@
+<h1>タスク更新</h1>
+<%= form_with(model: @task) do |f|%>
+  
+  <div>
+    <a>完了</a>
+    <%= f.check_box :completed %>
+  </div>
+  <div>
+    <p>タスク名</p>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <div>
+    <p>タスク詳細</p>
+    <%= f.text_area :description %>
+  </div>
+  <%= link_to root_path do%>
+  <button>キャンセル</button>
+  <% end %>
+  <%= f.submit "更新"%>
+<% end %>
+ 
