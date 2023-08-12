@@ -29,6 +29,11 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    Task.find(params[:id]).destroy
+    redirect_to root_url, notice: "削除に成功しました。", status: :see_other
+  end
+
 
     
   private
