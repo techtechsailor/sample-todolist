@@ -2,6 +2,7 @@
 <%= link_to add_path do%>
   <button>タスク追加</button>
 <% end %>
+<p><%= notice %></p>
 <ul> 
   <% @tasks.each do |task| %>
     <li>

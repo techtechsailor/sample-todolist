@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to root_url
+      redirect_to root_url, notice: "登録に成功しました。"
     else
       render 'new', status: :unprocessable_entity
     end
@@ -18,6 +18,15 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to root_url, notice: "更新に成功しました。"
+    else
+      render 'edit', status: :unprocessable_entity
+    end
   end
 
 
