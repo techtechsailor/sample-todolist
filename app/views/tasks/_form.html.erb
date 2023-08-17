@@ -1,0 +1,25 @@
+<%= form_with(model: @task) do |f|%>
+  <div>
+    <label>
+      <%= f.check_box :completed %> 完了
+    </label>
+  </div>
+  <div>
+    <dl>
+      <dt>タスク名</dt>
+      <%= f.text_field :title, placeholder: "new task..." %>
+    </dl>
+  </div>
+  <div>
+    <dl>
+      <dt>タスク詳細</dt>
+      <%= f.text_area :description, placeholder: "detail of new task..."  %>
+    </dl>
+  </div>
+  <div>
+    <%= link_to root_path do%>
+      <button>キャンセル</button>
+    <% end %>
+    <%= f.submit yield(:button_text)%>
+  </div>
+<% end %>

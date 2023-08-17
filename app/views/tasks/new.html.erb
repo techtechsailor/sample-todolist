@@ -1,18 +1,3 @@
-<h1>Newタスク</h1>
-<%= form_with(model: @task) do |f|%>
-  <div>
-    <p>タスク名</p>
-    <%= f.text_field :title, placeholder: "new task..." %>
-  </div>
-  <br>
-  <div>
-    <p>タスク詳細</p>
-    <%= f.text_area :description, placeholder: "detail of new task..." %>
-  </div>
-  <%= f.hidden_field :completed, :value=>false %>
-  <%= link_to root_path do%>
-  <button>キャンセル</button>
-  <% end %>
-  <%= f.submit "登録"%>
-<% end %>
- 
+<% provide(:button_text, '登録') %>
+<h1>タスク作成</h1>
+<%= render 'form'%>
