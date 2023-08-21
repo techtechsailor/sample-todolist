@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
+buy_eggs:
+  title: "buy eggs tomollow"
+  description: "明日卵を買う"
   completed: false
 
-two:
-  title: MyString
-  description: MyText
+clean_room:
+  title: "Clean room today"
+  description: "今日部屋を掃除する"
   completed: false
